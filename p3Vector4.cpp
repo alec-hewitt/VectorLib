@@ -91,9 +91,10 @@ Vector4 scaledVector(float magnitude, Vector4 direction){
 Vector4 Vector4::polarToCartesian(float magnitude, Vector4 direction){
 	float newX = magnitude * (direction.x / (sqrt((direction.x * direction.x) + (direction.y * direction.y))));
 	float newY = magnitude * (direction.y / (sqrt((direction.x * direction.x) + (direction.y * direction.y))));
+	float newZ = magnitude * (direction.z / (sqrt((direction.z * direction.z) + (direction.y * direction.y))));
 
 	Vector4 newVector;
-	newVector.set(newX, newY, 4);
+	newVector.set(newX, newY, newZ);
 	return newVector;
 }
 
